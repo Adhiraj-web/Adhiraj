@@ -1,2 +1,10 @@
-# Adhiraj
-I am Adhiraj pratap singh . I am currently persuing BCA . I have just start learning c language and i make some projects like leap year , odd even , for table , infinite loop and also learns about switch and many more things 
+#include<stdio.h>
+int main(){
+int year;
+printf("enter a year");
+scanf("%d",&year);
+((year%4==0 && year!=0 ) || (year%400==0))
+? printf("this is a leap year \n");
+: printf("this is not a leap year \n");
+return 0;
+}
