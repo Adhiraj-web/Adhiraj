@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(){
+  int n ,i , j , c = 0,s=0  , prime_c = 0, m;
+  printf("enter the m and n ");
+  scanf("%d%d",&n , &m);
+  printf("n<=m");
+  for(i=n ; i<=m; i++){
+    c=0;
+  for( j=1; j<=i ; j++){
+    if(i%j==0){
+      c++;
+  }
+}
+  if(c==2){
+   printf("%d \n" ,i); // print prime number
+     s+=i; // sum of prime number 
+     prime_c++; 
+}
+  }
+  printf("\n total number of prime number= %d \n",prime_c);
+  printf("sum of prime number = %d \n",s);
+  return 0;
+}
