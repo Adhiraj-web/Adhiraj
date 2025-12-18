@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *p, s = 0, avg, i;
+
+    // Allocate memory for 10 integers
+    p = (int*)malloc(10 * sizeof(int));
+    if (p == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+
+    printf("Enter 10 values:\n");
+    for (i = 0; i < 10; i++) {
+        printf("Enter value %d: ", i + 1);
+        scanf("%d", p + i);
+    }
+
+    printf("\nPrinting the data, sum, and average:\n");
+    for (i = 0; i < 10; i++) {
+        printf("%d\n", *(p + i));
+        s = s + *(p + i);
+    }
+
+    avg = s / 10;
+    printf("Sum = %d\n", s);
+    printf("Average = %d\n", avg);
+
+    free(p); // Always free allocated memory
+    return 0;
+}
